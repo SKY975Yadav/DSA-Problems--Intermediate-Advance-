@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class AdjacencyListRepresentationOfGraph {
+public class AdjacencyListRepresentationOfGraph { // Undirected Graph
     static void addEdge(ArrayList<ArrayList<Integer> > adj, int u, int v)
     {
         adj.get(u).add(v);
@@ -9,9 +9,9 @@ public class AdjacencyListRepresentationOfGraph {
 
     static void printGraph(ArrayList<ArrayList<Integer>> adj)
     {
-        for (ArrayList<Integer> integers : adj) {
-            for (Integer integer : integers) {
-                System.out.print(integer + " ");
+        for (ArrayList<Integer> vertices : adj) {
+            for (Integer vertex : vertices) {
+                System.out.print(vertex + " ");
             }
             System.out.println();
         }

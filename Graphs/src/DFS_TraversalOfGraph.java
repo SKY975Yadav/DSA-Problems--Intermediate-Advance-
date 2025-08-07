@@ -7,7 +7,6 @@ public class DFS_TraversalOfGraph {
         System.out.println();
         dfs2(graph);
     }
-
     public static void dfs1(ArrayList<ArrayList<Integer>> graph,int s){
         int noOfVertices = graph.size();
         boolean [] visited = new boolean[noOfVertices];
@@ -22,7 +21,6 @@ public class DFS_TraversalOfGraph {
             }
         }
     }
-
     public static void dfs2(ArrayList<ArrayList<Integer>> graph){
         int noOfVertices = graph.size();
         boolean [] visited = new boolean[noOfVertices];

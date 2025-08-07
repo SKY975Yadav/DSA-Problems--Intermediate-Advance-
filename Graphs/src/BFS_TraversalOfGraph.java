@@ -10,26 +10,24 @@ public class BFS_TraversalOfGraph {
         System.out.println();
         bfs2(graph);
     }
-    public static void bfs1(ArrayList<ArrayList<Integer>> graph,int s){ // Given source vertex . Traverse bfs from the given source
+    public static void bfs1(ArrayList<ArrayList<Integer>> graph,int s){ // Given source vertex . Traverse bfs from the given source, for connected graph
         int noOfVertices = graph.size();
         boolean [] visited = new boolean[noOfVertices];
 
-        Queue<ArrayList<Integer>> queue = new LinkedList<>();
-        queue.add(graph.get(s));
-        System.out.print(s+" ");
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(s);
         visited[s] = true;
         while (!queue.isEmpty()){
-            ArrayList<Integer> temp = queue.poll();
-            for (int v : temp) {
-                if (!visited[v]) {
-                    System.out.print(v + " ");
-                    queue.add(graph.get(v));
-                    visited[v] = true;
+            int u = queue.poll();
+            System.out.print(u + " ");
+            for (int vertex : graph.get(u)) {
+                if (!visited[vertex]) {
+                    queue.add(vertex);
+                    visited[vertex] = true;
                 }
             }
         }
     }
-
 
     public static void bfs2(ArrayList<ArrayList<Integer>> graph){ // For un connected graph and Will not give any source
         int noOfVertices = graph.size();
